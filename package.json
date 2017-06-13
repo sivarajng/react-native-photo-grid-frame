@@ -1,0 +1,28 @@
+{
+    "name": "react-native-photo-grid-frame",
+    "version": "1.0.0",
+    "description": "React Native component that builds a grid of photos with a Dynamic Photo Size",
+    "main": "PhotoGrid.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "lodash": "^4.17.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/sivarajng/react-native-photo-grid-frame.git"
+    },
+    "keywords": [
+        "react-native",
+        "photo",
+        "grid",
+        "frame"
+    ],
+    "author": "Sivaraj Nagaraj",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sivarajng/react-native-photo-grid-frame/issues"
+    },
+    "homepage": "https://github.com/sivarajng/react-native-photo-grid-frame#readme"
+}

@@ -5,6 +5,8 @@ React Native component that builds a grid of photos with a Dynamic Photo Size
 
 `npm install react-native-photo-grid-frame --save`
 
+## S reenshots
+![alt text](https://raw.githubusercontent.com/sivarajng/react-native-photo-grid-frame/master/images/sample.jpg)
 ## Usage
 
 ```
@@ -18,8 +20,8 @@ import {
   AppRegistry,
   ScrollView
 } from 'react-native';
-import { PhotoGrid } from './app/Pictures';
-import Photos from './app/Photos';
+import { PhotoGrid } from './PhotoGrid';
+import Photos from './Photos';
 
 
 export default class photoGrid extends Component {

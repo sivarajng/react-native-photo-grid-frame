@@ -1,6 +1,6 @@
 {
     "name": "react-native-photo-grid-frame",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React Native component that builds a grid of photos with a Dynamic Photo Size",
     "main": "PhotoGrid.js",
     "scripts": {

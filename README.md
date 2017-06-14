@@ -5,8 +5,10 @@ React Native component that builds a grid of photos with a Dynamic Photo Size
 
 `npm install react-native-photo-grid-frame --save`
 
-## S reenshots
-![alt text](https://raw.githubusercontent.com/sivarajng/react-native-photo-grid-frame/master/images/sample.jpg)
+## Screenshots
+![alt text](https://raw.githubusercontent.com/sivarajng/react-native-photo-grid-frame/master/images/screenshot1.png)
+![alt text](https://raw.githubusercontent.com/sivarajng/react-native-photo-grid-frame/master/images/screenshot2.png)
+![alt text](https://raw.githubusercontent.com/sivarajng/react-native-photo-grid-frame/master/images/screenshot3.png)
 ## Usage
 
 ```

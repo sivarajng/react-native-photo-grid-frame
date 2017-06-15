@@ -1,5 +1,5 @@
 # react-native-photo-grid-frame
-React Native component that builds a grid of photos with a Dynamic Photo Size
+React Native component that builds a grid of photos with a Dynamic Photo Size and Popup the Photo on click.
 
 ## Install
 

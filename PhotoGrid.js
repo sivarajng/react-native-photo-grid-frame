@@ -17,7 +17,11 @@ class PhotoGrid extends Component {
     }
 
     photoPopupToggle(photoUrl) {
-        this.setState({ modalVisible: !this.state.modalVisible, photoUrl });
+        if (this.props.onPressItem) {
+            this.props.onPressItem(photoUrl);
+        } else {
+            this.setState({ modalVisible: !this.state.modalVisible, photoUrl });
+        }
     }
 
     renderChunk() {

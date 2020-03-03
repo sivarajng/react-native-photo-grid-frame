@@ -53,6 +53,7 @@ class PhotoGrid extends Component {
 
     }
     renderPhotoRow1(row) {
+        const { children } = this.props;
         console.log('row', row);
         return (
             <View key={1} style={styles.alignCenter}>
@@ -63,6 +64,7 @@ class PhotoGrid extends Component {
                                 <View key={index} style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                                     <TouchableOpacity onPress={() => { this.photoPopupToggle(item.url) }}>
                                         <Image source={{ uri: item.url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                        {children && children(item)}
                                     </TouchableOpacity>
                                 </View>
                             )
@@ -75,13 +77,14 @@ class PhotoGrid extends Component {
         )
     }
     renderPhotoRow2(row) {
-
+        const { children } = this.props;
         if (row.length == 1) {
             return (
                 <View key={row[0].url} style={styles.alignCenter}>
                     <View key={row[0].url} style={[styles.expandedView, { borderRadius: this.props.borderRadius }]}>
                         <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                             <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, styles.expandedImage, { borderRadius: this.props.borderRadius }]} />
+                            {children && children(row[0])}
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -93,12 +96,14 @@ class PhotoGrid extends Component {
                     <View key={row[0].url} style={[styles.expandedView, { borderRadius: this.props.borderRadius }]}>
                         <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                             <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, styles.expandedImage, { borderRadius: this.props.borderRadius }]} />
+                            {children && children(row[0])}
                         </TouchableOpacity>
                     </View>
                     <View key={row[1].url} style={styles.flexCol}>
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[1].url) }}>
                                 <Image source={{ uri: row[1].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[1])}
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -112,17 +117,20 @@ class PhotoGrid extends Component {
                     <View key={row[0].url} style={[styles.expandedView, { borderRadius: this.props.borderRadius }]}>
                         <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                             <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, styles.expandedImage, { borderRadius: this.props.borderRadius }]} />
+                            {children && children(row[0])}
                         </TouchableOpacity>
                     </View>
                     <View key={row[1].url} style={styles.flexCol}>
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[1].url) }}>
                                 <Image source={{ uri: row[1].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[1])}
                             </TouchableOpacity>
                         </View>
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[2].url) }}>
                                 <Image source={{ uri: row[2].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[2])}
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -133,7 +141,7 @@ class PhotoGrid extends Component {
 
     }
     renderPhotoRow3(row) {
-
+        const { children } = this.props;
         if (row.length == 1) {
             return (
                 <View key={row[0].url} style={styles.alignCenter}>
@@ -141,6 +149,7 @@ class PhotoGrid extends Component {
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                                 <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[0])}
                             </TouchableOpacity>
                         </View>
 
@@ -155,11 +164,13 @@ class PhotoGrid extends Component {
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                                 <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[0])}
                             </TouchableOpacity>
                         </View>
                         <View key={row[1].url} style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[1].url) }}>
                                 <Image source={{ uri: row[1].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[1])}
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -175,17 +186,20 @@ class PhotoGrid extends Component {
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[0].url) }}>
                                 <Image source={{ uri: row[0].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[0])}
                             </TouchableOpacity>
                         </View>
                         <View style={[styles.photoView, { borderRadius: this.props.borderRadius }]}>
                             <TouchableOpacity onPress={() => { this.photoPopupToggle(row[1].url) }}>
                                 <Image source={{ uri: row[1].url }} style={[styles.ImageStyle, { borderRadius: this.props.borderRadius }]} />
+                                {children && children(row[1])}
                             </TouchableOpacity>
                         </View>
                     </View>
                     <View style={[styles.expandedView, { borderRadius: this.props.borderRadius }]}>
                         <TouchableOpacity onPress={() => { this.photoPopupToggle(row[2].url) }}>
                             <Image source={{ uri: row[2].url }} style={[styles.ImageStyle, styles.expandedImage, { borderRadius: this.props.borderRadius }]} />
+                            {children && children(row[2])}
                         </TouchableOpacity>
                     </View>
                 </View>

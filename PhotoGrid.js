@@ -2,6 +2,7 @@
  * Created by Sivaraj Nagaraj
  */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Image, Dimensions, Modal, TouchableOpacity } from 'react-native';
 import * as _ from 'lodash';
 
@@ -45,11 +46,20 @@ class PhotoGrid extends Component {
     }
 
     renderItem(item, index, expanded) {
-        const { children } = this.props;
+        const { children, imageProps, ImageComponent } = this.props;
         return (
             <View ref={`_${index}`} key={index} style={[expanded ? styles.expandedView : styles.photoView, { borderRadius: this.props.borderRadius }]}>
                 <TouchableOpacity onPress={() => { this.photoPopupToggle(item, index) }}>
-                    <Image source={{ uri: item.url }} style={[styles.ImageStyle, ...(expanded ? [styles.expandedImage] : []), { borderRadius: this.props.borderRadius }]} />
+                    <ImageComponent
+                        source={{ uri: item.url }}
+                        {...imageProps}
+                        style={[
+                            imageProps && imageProps.style,
+                            styles.ImageStyle,
+                            ...(expanded ? [styles.expandedImage] : []),
+                            { borderRadius: this.props.borderRadius }
+                        ]}
+                    />
                     {children && children(item)}
                 </TouchableOpacity>
             </View>
@@ -248,5 +258,21 @@ const styles = {
     },
 
 }
+
+PhotoGrid.propTypes = {
+    PhotosList: PropTypes.array,
+    borderRadius: PropTypes.number,
+    children: PropTypes.func,
+    imageProps: PropTypes.object,
+    onPressItem: PropTypes.func,
+    ImageComponent: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.object,
+    ])
+};
+
+PhotoGrid.defaultProps = {
+    ImageComponent: Image
+};
 
 export { PhotoGrid };

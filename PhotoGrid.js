@@ -265,10 +265,7 @@ PhotoGrid.propTypes = {
     children: PropTypes.func,
     imageProps: PropTypes.object,
     onPressItem: PropTypes.func,
-    ImageComponent: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.object,
-    ])
+    ImageComponent: PropTypes.elementType
 };
 
 PhotoGrid.defaultProps = {

@@ -24,7 +24,7 @@ import {
   AppRegistry,
   ScrollView
 } from 'react-native';
-import { PhotoGrid } from './PhotoGrid';
+import { PhotoGrid } from 'react-native-photo-grid-frame';
 import Photos from './Photos';
 
 
